@@ -1,13 +1,15 @@
 // app/page.jsx
+import Link from 'next/link'; //
+
 export default function Home() {
   return (
     <div dir="rtl" className="flex min-h-screen w-full flex-col font-[family-name:var(--font-vazir)]">
       <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
         <header className="mb-8 flex items-center justify-between">
           <div>
-            <a className="font-medium text-black dark:text-white" href="/">
+            <Link className="font-medium text-black dark:text-white" href="/">
               سینا نخعی
-            </a>
+            </Link>
             <p className="text-zinc-600 dark:text-zinc-500">
               <span className="sr-only">مهندس نرم‌افزار</span>
               <span className="inline-block whitespace-pre">مهندس </span>
@@ -92,9 +94,9 @@ export default function Home() {
             <h3 className="mb-5 text-lg font-medium">ارتباط</h3>
             <p className="mb-5 text-zinc-600 dark:text-zinc-400">
               با خیال راحت با من از طریق{' '}
-              <a className="underline dark:text-zinc-300" href="mailto:your@email.com">
+              <Link className="underline dark:text-zinc-300" href="mailto:your@email.com">
                 your@email.com
-              </a>{' '}
+              </Link>{' '}
               تماس بگیرید
             </p>
             <div className="flex items-center justify-start space-x-3 space-x-reverse">
@@ -108,11 +110,11 @@ export default function Home() {
 
         <footer className="mt-24 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
           <div className="flex items-center justify-between">
-            <a href="https://github.com/ibelick/nim" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/ibelick/nim" target="_blank" rel="noopener noreferrer">
               <div className="relative inline-block whitespace-nowrap text-xs text-zinc-500">
                 <span>ساخته شده با موشن پرایمتیوز.</span>
               </div>
-            </a>
+            </Link>
             {/* Theme switcher buttons would require additional state management */}
           </div>
         </footer>
@@ -134,7 +136,7 @@ function ProjectCard({ videoSrc, title, url, description }) {
         />
       </div>
       <div className="px-1">
-        <a
+        <Link
           className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
           href={url}
           target="_blank"
@@ -142,7 +144,7 @@ function ProjectCard({ videoSrc, title, url, description }) {
         >
           {title}
           <span className="absolute bottom-0.5 right-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-        </a>
+        </Link>
         <p className="text-base text-zinc-600 dark:text-zinc-400">{description}</p>
       </div>
     </div>
@@ -151,7 +153,7 @@ function ProjectCard({ videoSrc, title, url, description }) {
 
 function ExperienceCard({ title, company, period, url }) {
   return (
-    <a
+    <Link
       dir="rtl"
       className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
       href={url}
@@ -167,26 +169,26 @@ function ExperienceCard({ title, company, period, url }) {
           <p className="text-zinc-600 dark:text-zinc-400">{period}</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 
 function BlogPost({ title, description, url }) {
   return (
-    <a dir="rtl" className="relative inline-flex -mx-3 rounded-xl px-3 py-3" href={url}>
+    <Link dir="rtl" className="relative inline-flex -mx-3 rounded-xl px-3 py-3" href={url}>
       <div className="z-10">
         <div className="flex flex-col space-y-1">
           <h4 className="font-normal dark:text-zinc-100">{title}</h4>
           <p className="text-zinc-500 dark:text-zinc-400">{description}</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 
 function SocialLink({ href, text }) {
   return (
-    <a
+    <Link
       dir="rtl"
       href={href}
       className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
@@ -209,6 +211,6 @@ function SocialLink({ href, text }) {
           clipRule="evenodd"
         />
       </svg>
-    </a>
+    </Link>
   );
 }
