@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkthesinaa=self.webpackChunkthesinaa||[]).push([[1903],{1912:a=>{a.exports=JSON.parse('{"blogBasePath":"/thesinaa/blog","blogTitle":"Blog","authorsListPath":"/thesinaa/blog/authors"}')}}]);
