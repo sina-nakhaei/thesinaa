@@ -1,10 +1,6 @@
 import Link from '@docusaurus/Link';
-import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import React from 'react';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import styles from './index.module.css'; // Assuming you'll create a CSS module for styling
 
 export default function Home() {
   return (
